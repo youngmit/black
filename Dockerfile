@@ -4,7 +4,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir ~/black
-COPY * ~/black
+COPY * ~/black/
 WORKDIR ~/black
 RUN python setup.py install
 
