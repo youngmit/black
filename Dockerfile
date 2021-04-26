@@ -4,11 +4,11 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir ~/black
-
-COPY * ~/black/
-RUN ls -la ~/black
-COPY .git/ ~/black/
 WORKDIR ~/black
+
+COPY * ./
+RUN ls -la ~/black
+COPY .git/ ./.git/
 RUN ls -la
 RUN python setup.py install
 
