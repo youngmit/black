@@ -6,6 +6,7 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir ~/black
 
 COPY * ~/black/
+RUN ls -la ~/black
 COPY .git/ ~/black/
 WORKDIR ~/black
 RUN ls -la
